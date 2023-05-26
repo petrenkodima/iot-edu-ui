@@ -1,0 +1,26 @@
+#play-button-container {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+.play-button {
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    transition: clip-path .3s ease;
+}
+.play-button-before {
+    clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+}
+.play-button-after {
+    clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+}
+#play-button-container:hover .play-button-before {
+    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+}
+#play-button-container:hover .play-button-after{
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
+}
